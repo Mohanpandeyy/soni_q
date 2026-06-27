@@ -8,7 +8,6 @@ import SongsHistory from "@/components/SongsHistory";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "./AuthProvider";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
 import {
   SITE_URL,
   SITE_NAME,
@@ -43,9 +42,6 @@ export const metadata = {
   category: "music",
   classification: "Music Streaming",
   referrer: "origin-when-cross-origin",
-  verification: {
-    google: "xKWFwcLg7uqtQGOTNIKraZ8uxuWF9Jxa_By43QL3678",
-  },
   icons: [
     { rel: "icon", url: Favicon.src },
     { rel: "apple-touch-icon", url: "/icon-192x192.png" },
@@ -127,7 +123,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: SITE_NAME,
-      alternateName: ["Hayasaka Music", "Hayasaka App", "Hayasaka.8man.in"],
+      alternateName: ["Soniq Music", "Soniq App"],
       description: DEFAULT_DESCRIPTION,
       inLanguage: "en-US",
       publisher: { "@id": `${SITE_URL}/#organization` },
@@ -146,7 +142,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: SITE_NAME,
-      legalName: "Hayasaka Music",
+      legalName: "Soniq Music",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -157,15 +153,15 @@ const jsonLd = {
         caption: SITE_NAME,
       },
       image: { "@id": `${SITE_URL}/#logo` },
-      foundingDate: "2023",
+      foundingDate: "2024",
       slogan: SITE_TAGLINE,
-      sameAs: ["https://github.com/himanshu8443/hayasaka"],
+      sameAs: ["https://github.com/Mohanpandeyy/soniq"],
     },
     {
       "@type": "WebApplication",
       "@id": `${SITE_URL}/#webapp`,
       name: SITE_NAME,
-      alternateName: "Hayasaka Music",
+      alternateName: "Soniq Music",
       description: DEFAULT_DESCRIPTION,
       url: SITE_URL,
       applicationCategory: "MusicApplication",
@@ -200,34 +196,34 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "Is Hayasaka free to use?",
+          name: "Is Soniq free to use?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Hayasaka is completely free. You can stream and download music, build playlists, and follow artists without paying anything.",
+            text: "Yes. Soniq is completely free. You can stream and download music, build playlists, and follow artists without paying anything.",
           },
         },
         {
           "@type": "Question",
-          name: "Do I need to sign up to listen on Hayasaka?",
+          name: "Do I need to sign up to listen on Soniq?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can stream music on Hayasaka without an account. Sign up only if you want to save favorites and create personal playlists synced across devices.",
+            text: "You can stream music on Soniq without an account. Sign up only if you want to save favorites and create personal playlists synced across devices.",
           },
         },
         {
           "@type": "Question",
-          name: "What languages of songs are available on Hayasaka?",
+          name: "What languages of songs are available on Soniq?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Hayasaka covers Hindi, English, Punjabi, Tamil, Telugu, Bhojpuri, Marathi, Bengali, Gujarati, and more, including Bollywood and indie tracks.",
+            text: "Soniq covers Hindi, English, Punjabi, Tamil, Telugu, Bhojpuri, Marathi, Bengali, Gujarati, and more, including Bollywood and indie tracks.",
           },
         },
         {
           "@type": "Question",
-          name: "Can I download MP3 songs from Hayasaka?",
+          name: "Can I download MP3 songs from Soniq?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Each track on Hayasaka offers a download option so you can save songs in MP3 format for offline listening.",
+            text: "Yes. Each track on Soniq offers a download option so you can save songs in MP3 format for offline listening.",
           },
         },
       ],
@@ -244,20 +240,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-Z4FJ5T627Q"
-      ></Script>
-      <Script>
-        {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z4FJ5T627Q');
-  `}
-      </Script>
       <body className={poppins.className}>
         <Providers>
           <AuthProvider>
