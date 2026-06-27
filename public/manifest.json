@@ -1,8 +1,8 @@
 {
-  "id": "hayasaka.8man.in",
-  "name": "Hayasaka - Free Music Streaming, MP3 Download & Playlists",
-  "short_name": "Hayasaka",
-  "description": "Stream and download Bollywood, Hindi, Punjabi, English and regional songs for free on Hayasaka. Build playlists, follow artists, and discover new releases in high quality.",
+  "id": "soni-q.vercel.app",
+  "name": "Soniq - Free Music Streaming, MP3 Download & Playlists",
+  "short_name": "Soniq",
+  "description": "Stream and download Bollywood, Hindi, Punjabi, English and regional songs for free on Soniq. Build playlists, follow artists, and discover new releases in high quality.",
   "lang": "en",
   "dir": "ltr",
   "theme_color": "#000000",
