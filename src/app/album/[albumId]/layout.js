@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   if (!albumData) {
     return {
       title: "Album",
-      description: "Listen to this album on Hayasaka",
+      description: "Listen to this album on Soniq",
     };
   }
 
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${albumName} - ${artistNames}`,
-    description: `Listen to ${albumName} by ${artistNames}. ${songCount} songs. Download and stream ${albumName} album for free on Hayasaka. Released in ${year}.`,
+    description: `Listen to ${albumName} by ${artistNames}. ${songCount} songs. Download and stream ${albumName} album for free on Soniq. Released in ${year}.`,
     keywords: [
       albumName,
       artistNames,
@@ -45,10 +45,10 @@ export async function generateMetadata({ params }) {
       "free music",
     ],
     openGraph: {
-      title: `${albumName} by ${artistNames} | Hayasaka`,
+      title: `${albumName} by ${artistNames} | Soniq`,
       description: `Listen to ${albumName} by ${artistNames}. ${songCount} songs. Stream and download for free.`,
       url: `${siteUrl}/album/${params.albumId}`,
-      siteName: "Hayasaka",
+      siteName: "Soniq",
       type: "music.album",
       images: albumData?.image?.[2]?.url
         ? [
